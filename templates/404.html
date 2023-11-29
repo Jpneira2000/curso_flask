@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ super()}}
+    404
+{% endblock %}
+
+{% block header %}
+    <!-- Dejamos este bloque vacío para evitar que aparezca el header en la página de error 404 -->
+{% endblock %}
+
+{% block content %}
+    <h1>Lo sentimos, no encontramos lo que buscabas</h1>
+    <p>{{error}}</p>
+{% endblock %}
