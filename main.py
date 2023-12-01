@@ -14,13 +14,13 @@ def internal_server(error):
 
 @app.route('/')
 def index():
-    raise(Exception('500 error'))
-    # user_ip = request.remote_addr
+    # raise(Exception('500 error'))
+    user_ip = request.remote_addr
 
-    # response = make_response(redirect('/hello'))
-    # response.set_cookie('user_ip', user_ip)
+    response = make_response(redirect('/hello'))
+    response.set_cookie('user_ip', user_ip)
 
-    # return response
+    return response
 
 @app.route('/hello')
 def hello():
